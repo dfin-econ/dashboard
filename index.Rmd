@@ -20,6 +20,18 @@ output:
 color:#EDECE5!important;
 }
 </style> 
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G4G2HJ1Y2S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G4G2HJ1Y2S');
+</script>
+</head>   
+
 
 ```{r setup, include=FALSE}
 # This where we load up all the packages need to run the dashboard.
