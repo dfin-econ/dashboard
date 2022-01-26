@@ -634,7 +634,12 @@ cbi_cats <- cbi_cats %>%
 
 cbi_cats <- subset(cbi_cats, select = c(date, Other_retail, Accommodation, Transport, Restaurants_dining, Groceries_perishables))  
 cbi_cats_xts <- tk_xts(cbi_cats, date_var = date)
-dygraph(cbi_cats_xts)
+dygraph(cbi_cats_xts) %>%
+  dySeries("Other_retail", strokeWidth = 2, color = "#00a685") %>%
+  dySeries("Accommodation", strokeWidth = 2, color = "#a3915e") %>%
+  dySeries("Transport", strokeWidth = 2, color = "#004D44") %>%
+  dySeries("Restaurants_dining", strokeWidth = 2, color = "#dbac00") %>%
+  dySeries("Groceries_perishables", strokeWidth = 2, color = "#0090d4")
 
 ```
 
