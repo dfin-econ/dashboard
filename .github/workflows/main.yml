@@ -1,12 +1,12 @@
 name: Render library update
 on:
   schedule:
-  - cron: "00 16 * * 1-5"
+  - cron: "30 10 * * 1-5"
     branches: main
 
 jobs:
   build:
-    runs-on: macos-10.15	
+    runs-on: macOS-latest	
     steps:
       - uses: actions/checkout@v2
 
