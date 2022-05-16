@@ -1030,7 +1030,7 @@ Row
 ### Total and New Job Postings: Ireland
 ```{r}
 indeed <- read.csv(url("https://raw.githubusercontent.com/hiring-lab/data/master/IE/aggregate_job_postings_IE.csv"))
-indeed <-  spread(indeed, variable, pct_chng_feb_1)
+indeed <-  spread(indeed, variable, non_seasonally_adjusted_pct_chng_feb_1)
 indeed$date <- as.Date(indeed$date , format = "%Y-%m-%d")
 indeed <- clean_names(indeed)
 indeed_xts <- tk_xts(indeed, select = new_postings | total_postings, date_var = date)
